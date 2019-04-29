@@ -1,0 +1,25 @@
+
+form{
+    position:relative;
+    .searchInput{
+        margin:1rem;
+        border:1px solid #ddd;
+        border-radius: .4rem;
+        padding:.5rem;
+        text-align:center;
+        background:transparent;
+        z-index:10;
+     }
+    .fa-search{
+        position:absolute;
+        font-size:1.5rem;
+        left:35%;
+        top:1.5rem;
+        color:#ddd; 
+        z-index:-1; 
+    }
+    .active{
+        display:none;
+    }
+    
+}
