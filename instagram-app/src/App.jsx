@@ -10,12 +10,23 @@ export default class App extends React.Component{
   constructor(){
     super();
     this.state = {
-      userPosts : dataSet
+      userPosts : [],
+      userComments: []
     }
   }
 
   newPost = userPost =>{
 
+  }
+
+  componentDidUpdate(){
+    
+  }
+
+  componentDidMount(){
+    this.setState({
+      userPosts : dataSet
+    })
   }
 
   render(){
@@ -24,7 +35,7 @@ export default class App extends React.Component{
         <header className="header">
           <div className="logo">
             <i className="fab fa-instagram fa-5x"></i>
-            <img src={logo} />
+            <img src={logo} alt="Instagram in Cursive type writing" />
           </div>
           <Search />
           <div className="iconTray">

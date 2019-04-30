@@ -3,7 +3,6 @@ import UserPost from './UserPost';
 import PropTypes from 'prop-types';
 
 export default function PostContainer(props){
-    console.log(props.userPosts)
     return(
         <>
             <div className="PostContainer">
