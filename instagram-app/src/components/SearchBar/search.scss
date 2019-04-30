@@ -3,21 +3,17 @@ form{
     position:relative;
     .searchInput{
         margin:1rem;
-        border:1px solid #ddd;
+        border:2px solid #a5a7aa;
         border-radius: .4rem;
-        padding:.5rem;
+        padding:1rem 3rem;
         text-align:center;
-        background:transparent;
+        background:#fafafa;
         z-index:10;
+        color:#a5a7aa;
+        font-family:Arial, FontAwesome;
+        font-size:1.8rem;
      }
-    .fa-search{
-        position:absolute;
-        font-size:1.5rem;
-        left:35%;
-        top:1.5rem;
-        color:#ddd; 
-        z-index:-1; 
-    }
+    
     .active{
         display:none;
     }

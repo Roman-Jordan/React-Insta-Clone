@@ -1,0 +1,16 @@
+
+.UserPost{
+    header{
+        display: flex;
+        align-items:center;
+
+        img{
+            width:6rem;
+            border-radius: 50%;
+            
+        }
+        p{
+            font-size: 1.8rem;
+        }
+    }
+}

@@ -3,29 +3,37 @@ import './App.scss';
 import dataSet from'./dummy-data.js';
 import Search from './components/SearchBar/Search';
 import logo from './1200px-Instagram_logo.svg.png';
-import PropTypes from 'prop-types';
+import PostContainer from './components/PostContainer/Post'
 
 
 export default class App extends React.Component{
   constructor(){
     super();
     this.state = {
-      userPosts : []
+      userPosts : dataSet
     }
-    console.log(dataSet);
   }
+
+  newPost = userPost =>{
+
+  }
+
   render(){
     return (
       <div className="App">
-        <div className="header">
+        <header className="header">
           <div className="logo">
-            <i className="fab fa-instagram fa-4x"></i>
+            <i className="fab fa-instagram fa-5x"></i>
             <img src={logo} />
           </div>
           <Search />
           <div className="iconTray">
+            <i className="far fa-compass fa-3x"></i>
+            <i className="far fa-heart fa-3x"></i>
+            <i className="far fa-user fa-3x"></i>
           </div>
-        </div>
+        </header>
+        <PostContainer userPosts={this.state.userPosts} newPost={this.newPost}/>
       </div>
     )
   }

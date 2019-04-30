@@ -21,12 +21,7 @@ export default class Search extends React.Component{
         this.setState({
            [key]:value,
         })
-        if(value !== ''){
-            this.statusActive += 'active';
-            this.setState({
-                statusActive: !this.state.statusActive
-            }) 
-        }
+        
     }
     
     render(){
@@ -38,9 +33,11 @@ export default class Search extends React.Component{
                     className="searchInput " 
                     onChange={this.searchInput} 
                     name="searchInput" 
-                    value={this.state.searchInput} 
+                    value={this.state.searchInput}
+                    placeholder="&#xF002; Search"
+                    
                 />
-                <i className={`fas fa-search ${this.statusActive}`}> Search</i>
+                
             </form>
             </>
         )
