@@ -1,6 +1,6 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import UserPost from './UserPost';
+import PropTypes from 'prop-types';
 
 export default function PostContainer(props){
     console.log(props.userPosts)
@@ -13,6 +13,14 @@ export default function PostContainer(props){
             </div>
         </>
     )
+}
 
-    
+PostContainer.propTypes = {
+    post: PropTypes.arrayOf(
+        PropTypes.shape({
+            username: PropTypes.string.isRequired,
+            imageUrl: PropTypes.string.isRequired,
+            thumbnailUrl: PropTypes.string.isRequired
+        })
+    )
 }

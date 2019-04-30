@@ -1,6 +1,7 @@
 import React from 'react';
-import './post.scss'
+import './post.scss';
 export default function UserPost(props){
+    
 
     return(
         <section className="UserPost">
@@ -13,3 +14,5 @@ export default function UserPost(props){
     )
 
 }
+
+
