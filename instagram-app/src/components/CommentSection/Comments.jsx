@@ -17,7 +17,7 @@ export default class Comments extends React.Component{
       })
     }
 
-    addComment = e => {
+    CommentSubmitted = e => {
         e.preventDefault();
         this.setState({
             comments: [...this.state.comments,{
@@ -33,7 +33,7 @@ export default class Comments extends React.Component{
             <div className="Comments">
                 {this.state.comments.map((comment, i) => <Comment key={i} userComment={comment} />)}
             </div>
-            <AddComment userComment={this.state.comments} addComment={this.addComment} />
+            <AddComment userComment={this.state.comments} CommentSubmitted={this.CommentSubmitted} />
             </>
         )
     }

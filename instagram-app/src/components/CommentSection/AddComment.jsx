@@ -5,13 +5,13 @@ export default function AddComment(props){
         <div className="AddComment">
             <form>
                 <input 
-                type="text" 
-                name="addComment"
-                className="addComment"
-                placeholder="Add a comment..." 
-                value = {props.text}
+                    type="text" 
+                    name="addComment"
+                    className="addComment"
+                    placeholder="Add a comment..." 
+                    value = {props.text}
                 />
-                <button onClick={props.addComment} type="submit">...</button>
+                <button onClick={props.CommentSubmitted} type="submit">...</button>
             </form>
         </div>
     )

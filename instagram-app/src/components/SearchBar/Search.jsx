@@ -11,17 +11,13 @@ export default class Search extends React.Component{
         this.statusActive = '';
         
     }
-    
 
     searchInput = e =>{
         let key = e.target.name;
         let value = e.target.value;
-  
-        
         this.setState({
            [key]:value,
         })
-        
     }
     
     render(){
@@ -35,7 +31,6 @@ export default class Search extends React.Component{
                     name="searchInput" 
                     value={this.state.searchInput}
                     placeholder="&#xF002; Search"
-                    
                 />
                 
             </form>

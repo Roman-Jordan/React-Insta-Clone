@@ -23,7 +23,6 @@ export default function UserPost(props){
             </div>
         </section>
     )
-
 }
 
 
