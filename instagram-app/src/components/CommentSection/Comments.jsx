@@ -6,8 +6,9 @@ export default class Comments extends React.Component{
     constructor(props){
         super();
         this.state ={
-            comments: []
-            
+            comments: [],
+            username:localStorage.getItem('username') ,
+            newComment:''
         }
     }
 
@@ -20,11 +21,16 @@ export default class Comments extends React.Component{
     CommentSubmitted = e => {
         e.preventDefault();
         this.setState({
-            comments: [...this.state.comments,{
-                text:'2',
-                username:'2'    
-            }]})
-        console.log(this.state.comments)
+            comments: [...this.state.comments,{text:this.state.newComment,username:this.state.username}],
+            newComment:''
+        })
+        console.log(e.target)
+    }
+
+    CommentUpdate = e =>{
+        this.setState({
+            newComment:e.target.value
+        })
     }
 
     render(){
@@ -33,7 +39,12 @@ export default class Comments extends React.Component{
             <div className="Comments">
                 {this.state.comments.map((comment, i) => <Comment key={i} userComment={comment} />)}
             </div>
-            <AddComment userComment={this.state.comments} CommentSubmitted={this.CommentSubmitted} />
+            <AddComment 
+                userComment={this.state.comments} 
+                CommentUpdate={this.CommentUpdate} 
+                CommentSubmitted={this.CommentSubmitted} 
+                text={this.state.newComment}
+            />
             </>
         )
     }

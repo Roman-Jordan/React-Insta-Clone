@@ -7,7 +7,7 @@ export default function PostContainer(props){
         <>
             <div className="PostContainer">
                 {props.userPosts.map((userPost, i) => 
-                    <UserPost key={i} post={userPost} />
+                    <UserPost postIndex={i} key={i} post={userPost} />
                 )}
             </div>
         </>

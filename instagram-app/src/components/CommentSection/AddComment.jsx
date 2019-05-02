@@ -3,15 +3,16 @@ export default function AddComment(props){
 
     return(
         <div className="AddComment">
-            <form>
+            <form onSubmit={props.CommentSubmitted}>
                 <input 
                     type="text" 
                     name="addComment"
                     className="addComment"
                     placeholder="Add a comment..." 
                     value = {props.text}
+                    onChange = {props.CommentUpdate}
                 />
-                <button onClick={props.CommentSubmitted} type="submit">...</button>
+                <button type="submit">...</button>
             </form>
         </div>
     )
