@@ -1,0 +1,26 @@
+.Comments{
+    margin:.5rem auto;
+    border-bottom:1px #ddd solid;
+    width:97%;
+    padding: 1rem 0;
+    
+    .Comment{
+        margin:1rem 0;
+        p{
+            font-size:1.6rem;
+            strong{
+                font-weight: bolder;
+            }
+        }
+    } 
+}
+
+.AddComment{
+    .addComment{
+        width:100%;
+        border:none;
+        color:#ddd;
+        margin:1.5rem 1rem;
+        font-size:1.5rem;
+    }
+}
